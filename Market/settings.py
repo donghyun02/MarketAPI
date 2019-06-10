@@ -142,6 +142,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=3),
 }
 
-CORS_ORIGIN_WHITELIST = [
-    "http://127.0.0.1:8080"
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = [
+#     "http://127.0.0.1:8080"
+# ]
