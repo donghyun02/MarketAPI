@@ -6,17 +6,9 @@ from django.utils import timezone
 
 
 class Post(models.Model):
-    BUY = 'B'
-    SELL = 'S'
-    TYPE_CHOICES = (
-        (BUY, 'Buy'),
-        (SELL, 'Sell')
-    )
-    type = models.CharField(max_length=1, choices=TYPE_CHOICES, default=BUY)
     title = models.CharField(max_length=124)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    is_trade_finished = models.BooleanField(default=False)
     price = models.PositiveIntegerField()
     created_at = models.DateTimeField(default=timezone.now)
 
